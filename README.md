@@ -8,3 +8,4 @@
 - [참조변수와 일반변수](https://github.com/SimJaeuk/TIL/blob/main/Java/%EC%9D%BC%EB%B0%98%EB%B3%80%EC%88%98_%EC%B0%B8%EC%A1%B0%EB%B3%80%EC%88%98.md)
 - [스택과 큐](https://github.com/SimJaeuk/TIL/blob/main/Java/Stack%2CQueue.md)
 - [메소드의 리턴](https://github.com/SimJaeuk/TIL/blob/main/Java/%EB%A9%94%EC%86%8C%EB%93%9C%EC%9D%98%20%EB%A6%AC%ED%84%B4.md)
+- [매개변수와 인수](https://github.com/SimJaeuk/TIL/blob/main/Java/%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EC%99%80%EC%9D%B8%EC%88%98.md)
