@@ -32,4 +32,4 @@
 
 #### 출처 : 
 데어 프로그래밍 JAVA강의 <https://www.easyupclass.com/course/274/about>,  
- <https://velog.io/@hanblueblue/Java-SOLID-SRP-OCP-LSP-ISP-DIP>
+Keep Going벨로그 <https://velog.io/@hanblueblue/Java-SOLID-SRP-OCP-LSP-ISP-DIP>
