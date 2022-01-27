@@ -21,3 +21,4 @@
 - [오버라이딩](https://github.com/SimJaeuk/TIL/blob/main/Java/%EC%98%A4%EB%B2%84%EB%9D%BC%EC%9D%B4%EB%94%A9.md)
 - [추상클래스](https://github.com/SimJaeuk/TIL/blob/main/Java/%EC%B6%94%EC%83%81%ED%81%B4%EB%9E%98%EC%8A%A4.md)
 - [인터페이스](https://github.com/SimJaeuk/TIL/blob/main/Java/%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4.md)
+- [SRP,DIP](https://github.com/SimJaeuk/TIL/blob/main/Java/SRP%2CDIP.md)
