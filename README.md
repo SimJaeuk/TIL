@@ -28,3 +28,4 @@
 - [오브젝트클래스](https://github.com/SimJaeuk/TIL/blob/main/Java/Object%ED%81%B4%EB%9E%98%EC%8A%A4.md)
 - [쓰레드](https://github.com/SimJaeuk/TIL/blob/main/Java/%EC%93%B0%EB%A0%88%EB%93%9C.md)
 - [동기와 비동기](https://github.com/SimJaeuk/TIL/blob/main/Java/%EB%8F%99%EA%B8%B0%EC%99%80%20%EB%B9%84%EB%8F%99%EA%B8%B0.md)
+- [예외 처리](https://github.com/SimJaeuk/TIL/blob/main/Java/%EC%98%88%EC%99%B8%20%EC%B2%98%EB%A6%AC.md)
