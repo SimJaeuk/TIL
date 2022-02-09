@@ -1,4 +1,5 @@
 # Http의 4가지 요청 방식
+### HTTP에는 대표적으로 아래 4가지의 요청방식이 있다. 
 
 ![20220209181931](https://user-images.githubusercontent.com/78770230/153164586-05b6bad8-ec84-4c6f-9ae3-ff5e5a401673.jpg)
 
