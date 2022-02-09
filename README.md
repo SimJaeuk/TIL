@@ -34,3 +34,4 @@
 - [스프링이란?](https://github.com/SimJaeuk/TIL/blob/main/Spring/%EC%8A%A4%ED%94%84%EB%A7%81%EC%9D%B4%EB%9E%80%3F.md)
 - [JPA란?](https://github.com/SimJaeuk/TIL/blob/main/Spring/JPA%EB%9E%80%3F.md)
 - [YAML이란?](https://github.com/SimJaeuk/TIL/blob/main/Spring/YAML%ED%8C%8C%EC%9D%BC%EC%9D%B4%EB%9E%80%3F.md)
+- [컨트롤러란?](https://github.com/SimJaeuk/TIL/blob/main/Spring/%EC%BB%A8%ED%8A%B8%EB%A1%A4%EB%9F%AC%EB%9E%80%3F.md)
