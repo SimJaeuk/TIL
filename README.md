@@ -41,3 +41,4 @@
 ## Http
 - [Http의 4가지 요청 방식](https://github.com/SimJaeuk/TIL/blob/main/Http/Http%EC%9D%98%204%EA%B0%80%EC%A7%80%20%EC%9A%94%EC%B2%AD%20%EB%B0%A9%EC%8B%9D.md)
 - [인터넷 네트워크](https://github.com/SimJaeuk/TIL/blob/main/Http/%EC%9D%B8%ED%84%B0%EB%84%B7%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC.md)
+- [URI와 웹 브라우저 요청 흐름]()
