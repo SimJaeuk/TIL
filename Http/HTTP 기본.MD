@@ -181,10 +181,12 @@
 <br></br>
 
 ### 연결을 유지하지 않는 모델<br></br>
+![3 http pdf_page_26](https://user-images.githubusercontent.com/78770230/169288845-8432decc-1ca2-44eb-a825-141bd1ac0983.png)
+![3 http pdf_page_27](https://user-images.githubusercontent.com/78770230/169288856-cdd987b1-bb93-4917-bbc2-50e5445fc054.png)
+![3 http pdf_page_28](https://user-images.githubusercontent.com/78770230/169288860-e4d1dc06-1a0b-4152-98c9-81c29907483b.png)
+![3 http pdf_page_29](https://user-images.githubusercontent.com/78770230/169288866-6301ea25-8e9a-4e6a-95f5-77c8a49f86fa.png)
 
-![3 http pdf_page_26](https://user-images.githubusercontent.com/78770230/169285492-88713aa7-16cc-48ea-b52d-62f866![3 http pdf_page_27](https://user-images.githubusercontent.com/78770230/169285497-2ef3d26b-0b9f-49b6-a1e0-66f74759f7e1.png)
-a61595.png)
-![3 http pdf_page_28](https://user-images.githubusercontent.com/78770230/169285504-26bef08a-8525-4aae-833a-70afbf065df6.png)
+
 - 요청을 주고 받을 때에만 연결을 유지한다. 
 - 서버유지에 필요한 자원을 최소한으로 줄여준다.
 <br></br>
