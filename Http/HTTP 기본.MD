@@ -169,6 +169,63 @@
 - 상태 유지는 최소한만 사용해야한다.
 - 데이터를 너무 많이 보낸다는 단점이 있다.
 
+## 비 연결성(Connectionless) <br></br>
+
+### 연결을 유지하는 모델
+![3 http pdf_page_22](https://user-images.githubusercontent.com/78770230/169284795-5acd2208-4c13-4e8e-aee6-0af7f7a26fda.png)
+![3 http pdf_page_23](https://user-images.githubusercontent.com/78770230/169284800-412accff-03a9-4e05-a540-69570a00b761.png)
+![3 http pdf_page_24](https://user-images.githubusercontent.com/78770230/169284808-a2e21b9d-ed07-45c6-b252-42020f793e2b.png)
+- TCP/IP 연결의 경우 기본적으로 연결을 유지한다.
+- 클라이언트 2,3은 요청을 보내지 않더라도 계속 연결을 유지하고 있다.
+- 연결을 유지하는 서버의 자원이 계속 소모가 된다.
+<br></br>
+
+### 연결을 유지하지 않는 모델<br></br>
+
+![3 http pdf_page_26](https://user-images.githubusercontent.com/78770230/169285492-88713aa7-16cc-48ea-b52d-62f866![3 http pdf_page_27](https://user-images.githubusercontent.com/78770230/169285497-2ef3d26b-0b9f-49b6-a1e0-66f74759f7e1.png)
+a61595.png)
+![3 http pdf_page_28](https://user-images.githubusercontent.com/78770230/169285504-26bef08a-8525-4aae-833a-70afbf065df6.png)
+- 요청을 주고 받을 때에만 연결을 유지한다. 
+- 서버유지에 필요한 자원을 최소한으로 줄여준다.
+<br></br>
+
+### 연결을 유지하지 않는 모델
+- HTTP는 기본적으로 연결을 유지하지 않는 모델이다.
+- 일반적으로 초 단위 이하의 빠른 속도로 응답한다.
+- 1시간 동안 수천명이 서비스를 사용해도 실제 서버에서 동시에 처리하는 요청은 수십개 이하로 매우 작다.
+  - 예) 웹 브라우저에서 계속 연속해서 검색 버튼을 누르지는 않는다.
+- 서버 자원을 매우 효율적으로 사용할 수 있음
+<br></br>
+
+### 비 연결성의 한계와 극복
+- 요청이 있을 때마다 TCP/IP 연결을 새로 맺어야 한다. - 3 way handshake 시간 추가
+- 웹 브라우저로 사이트를 요청하면 HTML 뿐만 아니라 자바스크립트, CSS, 추가 이미지 등 수 많은 자원이 함께 다운로드
+  - 수 많은 자원들을 보낼때마다 연결을 했다가 끊었다가 반복하는 것은 비효율
+- 지금은 HTTP 지속 연결(Persistent Connections)로 문제 해결
+- HTTP/2, HTTP/3에서 더 많은 최적화
+<br></br>
+
+
+
+### HTTP 초기 - 연결, 종료 낭비
+![3 http pdf_page_33](https://user-images.githubusercontent.com/78770230/169287366-61e48b88-dab7-454b-9131-35ec2f62dcda.png)
+<br></br>
+
+### HTTP 지속 연결(Persistent Connections)
+![3 http pdf_page_34](https://user-images.githubusercontent.com/78770230/169287502-e7480ad1-3167-4a40-bef5-a4a8870fff2a.png)
+<br></br>
+
+### 스테이스리스를 기억하자
+#### 서버 개발자들이 어려워하는 업무
+
+- 같은 시간에 딱 맞추어 발생하는 대용량 트래픽
+  - 예) 선착순 이벤트, 명절 KTX 예약, 학과 수업 등록
+- 비 연결성이 소용 없다. (동시 요청으로 몰리기 때문)
+<br></br>
+
+> 최대한 Stateless하게 설계해야한다.  
+> 그래야만 이런 대용량 트래픽이 올 때에도 서버를 한번에 늘려서 대응할 수 있는 부분이 많아진다.
+>> 무상태로 갈 수 있는 부분은 최대한 무상태로 가고 어쩔 수 없는 부분에 한해서 상태유지를 하도록 잘 분리해서 설계하는게 중요하다.
 
 
 <br></br><br></br>
