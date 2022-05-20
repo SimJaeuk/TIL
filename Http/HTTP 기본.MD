@@ -228,8 +228,85 @@
 > 최대한 Stateless하게 설계해야한다.  
 > 그래야만 이런 대용량 트래픽이 올 때에도 서버를 한번에 늘려서 대응할 수 있는 부분이 많아진다.
 >> 무상태로 갈 수 있는 부분은 최대한 무상태로 가고 어쩔 수 없는 부분에 한해서 상태유지를 하도록 잘 분리해서 설계하는게 중요하다.
+<br></br>
 
+## HTTP 메세지
+### `클라이언트와 서버 사이에서 데이터와 교환되는 방식`
+<br></br>
 
+### HTTP는 요청메세지와 응답메세지의 구조가 조금 다르다.
+![20220520194712](https://user-images.githubusercontent.com/78770230/169512440-1a4a5ee7-9876-4adf-8193-15f4caac6132.jpg)
+- 시작 라인, 헤더, **공백 라인**(필수), 메세지 바디로 이루어져 있음
+<br></br>
+
+![20220520194719](https://user-images.githubusercontent.com/78770230/169512567-1e614a47-2b60-4da0-9e13-5fef50cc00ac.jpg)
+- 요청 메세지도 body 본문을 가질 수 있음
+- 메세지 바디가 없다면 공백으로 놓고 끝내면 됨
+<br></br>
+
+![20220520194723](https://user-images.githubusercontent.com/78770230/169512592-7aae5410-897d-4b07-bd35-6ba9730596ce.jpg)
+
+### 시작 라인
+- 크게 request-line과 status-line이 있다.
+- 요청 메세지는 request-line, 응답은 status-line
+<br></br>
+
+### 요청 메세지
+- request-line = method SP request-target SP HTTP-version CRLF(엔터)
+![20220520195445](https://user-images.githubusercontent.com/78770230/169513611-a8047ded-463e-4851-956a-9907dafd3fa7.jpg) 
+- HTTP 메서드 (GET: 조회)
+- 요청 대상(/search?q=hello&hl=ko)
+- HTTP Version
+<br></br>
+
+### HTTP 메서드
+- 종류: GET, POST, PUT, DELETE...
+- 서버가 수행해야 할 동작 지정
+  - GET: 리소스 조회
+  - POST: 요청 내역 처리
+<br></br>
+
+### 요청 대상
+- absolute-path[?query] (절대경로[?쿼리])
+- 절대경로= "/"로 시작하는 경로
+- 참고: http://...?x=y 와 같이 다른 유형의 경로지정 방법도 있다.
+<br></br>
+
+### 응답 메세지
+- status-line = HTTP-version SP status-code SP reason-phrase CRLF
+<br></br>
+
+![20220520200519](https://user-images.githubusercontent.com/78770230/169515225-c043bf3c-fff1-4dd5-9e0f-d60bd2af6d93.jpg)
+- HTTP 버전
+- HTTP 상태 코드: 요청 성공, 실패를 나타냄
+  - 200: 성공
+  - 400: 클라이언트 요청 오류
+  - 500: 서버 내부 오류
+- 이유 문구: 사람이 이해할 수 있는 짧은 상태의 코드 설명 글
+<br></br>
+
+### HTTP 헤더
+- header-field = field-name ":" OWS field-value OWS (OWS:띄어쓰기 허용)
+- field-name은 대소문자 구문 없으나 value는 대소문자를 구분 한다.
+<br></br>
+- HTTP 전송에 필요한 모든 부가정보가 들어있다.
+- 예) 메세지 바다의 내용, 메시지 바디의 크기, 압축, 인증, 요청 클라이언트(브라우저) 정보,  
+  서버 애플리케이션 정보, 캐시 관리 정보...
+- 표준 헤더가 너무 많음
+  - https://en.wikipedia.org/wiki/ListofHTTPheaderfields
+- 필요 시 임의의 헤더 추가 가능
+  - helloworld: hihi
+<br></br>
+### HTTP 메세지 바디
+- 실제 전송할 데이터가 들어있다.
+- HTML 문서, 이미지, 영상, JSON 등등 byte로 표현할 수 있는 모든 데이터 전송 가능
+- 압축해서 보낸다면 압축된 내용이 바디에 들어가게된다.
+<br></br>
+
+### 단순함 확장 가능
+- HTTP는 단순하다. 스펙도 읽어볼만 하다...
+- HTTP 메세지도 매우 단순하다.
+- 크게 성공하는 표준 기술은 단순하지만 확장 가능한 기술이다.
 <br></br><br></br>
 
 출처 : 모든 개발자를 위한 HTTP 웹 기본 지식 : <https://www.inflearn.com/course/http-%EC%9B%B9-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC>,
